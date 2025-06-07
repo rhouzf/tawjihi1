@@ -53,7 +53,7 @@ const Chatbot = () => {
 
       const API_URL = process.env.NODE_ENV === 'development' 
         ? 'http://localhost:5000/api/chat'  // URL locale pour le serveur Python
-        : 'https://votre-backend-url.com/api/chat';  // URL de votre backend en production
+        : `${process.env.REACT_APP_API_URL}/chat`;  // URL de votre backend en production
 
       console.log('API URL:', API_URL); // Pour le débogage
       const response = await fetch(API_URL, {
