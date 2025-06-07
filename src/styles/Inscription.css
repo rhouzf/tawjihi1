@@ -1,0 +1,325 @@
+.inscription-container {
+  min-height: 100vh;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+}
+
+.inscription-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.inscription-intro {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 15px;
+}
+
+.inscription-intro h1 {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.intro-text {
+  color: #6c757d;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+}
+
+.requirements {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.requirements h2 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.requirements ul {
+  list-style: none;
+  padding: 0;
+}
+
+.requirements li {
+  color: #6c757d;
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.requirements li:before {
+  content: "•";
+  color: #3498db;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.form-section {
+  margin-bottom: 2.5rem;
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 15px;
+}
+
+.form-section h2 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  display: block;
+  color: #495057;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+  outline: none;
+}
+
+.form-group input[type="file"] {
+  padding: 0.5rem;
+  background: white;
+  cursor: pointer;
+}
+
+.schools-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.school-checkbox {
+  display: flex;
+  align-items: flex-start;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.school-checkbox:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.school-checkbox input[type="checkbox"] {
+  margin-right: 1rem;
+  margin-top: 0.5rem;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #3498db;
+}
+
+.school-info {
+  flex: 1;
+}
+
+.school-info label {
+  cursor: pointer;
+  display: block;
+}
+
+.school-info h3 {
+  color: #2c3e50;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.school-info p {
+  color: #3498db;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.school-description {
+  color: #6c757d;
+  font-size: 0.9rem;
+  display: block;
+  line-height: 1.4;
+}
+
+.school-checkbox input[type="checkbox"]:checked + .school-info {
+  color: #3498db;
+}
+
+.school-checkbox input[type="checkbox"]:checked + .school-info h3 {
+  color: #3498db;
+}
+
+.school-checkbox input[type="checkbox"]:checked + .school-info p {
+  color: #2980b9;
+}
+
+.school-checkbox input[type="checkbox"]:checked + .school-info .school-description {
+  color: #7f8c8d;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 2rem auto;
+  padding: 1rem 2rem;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  background: #2980b9;
+  transform: translateY(-2px);
+}
+
+.submit-button:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.submit-button.loading {
+  position: relative;
+  color: transparent;
+}
+
+.submit-button.loading:after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  margin: -10px 0 0 -10px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .inscription-container {
+    padding: 1rem;
+  }
+
+  .inscription-content {
+    padding: 1rem;
+  }
+
+  .inscription-intro {
+    padding: 1.5rem;
+  }
+
+  .inscription-intro h1 {
+    font-size: 2rem;
+  }
+
+  .form-section {
+    padding: 1.5rem;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .schools-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .school-checkbox {
+    padding: 1rem;
+  }
+
+  .school-info h3 {
+    font-size: 1.2rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.inscription-content {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.form-section {
+  animation: fadeIn 0.5s ease-out;
+  animation-fill-mode: both;
+}
+
+.form-section:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.form-section:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.form-section:nth-child(4) {
+  animation-delay: 0.3s;
+} 
